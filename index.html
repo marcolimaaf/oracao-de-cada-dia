@@ -218,6 +218,37 @@ nav{
   transition:all .3s;
 }
 .btn-youtube:hover{background:#CC0000}
+.btn-pix{
+  display:inline-block;padding:.9rem 2rem;
+  background:#32BCAD;color:#fff;
+  font-size:.85rem;font-weight:500;
+  letter-spacing:.04em;text-decoration:none;
+  transition:all .3s;cursor:pointer;border:none;
+  font-family:inherit;
+}
+.btn-pix:hover{background:#2AA89B}
+.pix-box{
+  margin-top:2rem;padding:1.5rem;
+  background:rgba(50,188,173,.08);
+  border:1px solid rgba(50,188,173,.2);
+  max-width:420px;margin-left:auto;margin-right:auto;
+  display:none;text-align:center;
+}
+.pix-box p{font-size:.82rem;color:var(--stone);margin-bottom:.6rem}
+.pix-key{
+  font-family:monospace;font-size:.78rem;
+  background:rgba(0,0,0,.04);padding:.5rem .8rem;
+  word-break:break-all;user-select:all;
+  border:1px dashed rgba(50,188,173,.3);
+  margin:.5rem 0;display:block;
+}
+.pix-copy{
+  font-size:.75rem;padding:.4rem 1rem;
+  background:#32BCAD;color:#fff;border:none;
+  cursor:pointer;font-family:inherit;
+  transition:all .3s;
+}
+.pix-copy:hover{background:#2AA89B}
 
 /* ── FOOTER ── */
 footer{
@@ -305,6 +336,16 @@ footer{
     <div class="cta-row">
       <a href="https://whatsapp.com/channel/0029VbDorUSBvvsZJzi5SE3r" target="_blank" rel="noopener" class="btn-whatsapp">Receber no WhatsApp</a>
       <a href="https://youtube.com/@oracaodecadadiaoficialbr" target="_blank" rel="noopener" class="btn-youtube">Assistir no YouTube</a>
+    </div>
+    <div style="margin-top:2.5rem">
+      <p style="font-size:.85rem;color:var(--stone);margin-bottom:.8rem">Se este projeto abençoa sua vida, considere contribuir com qualquer valor.</p>
+      <button class="btn-pix" onclick="document.getElementById('pix-box').style.display=document.getElementById('pix-box').style.display==='block'?'none':'block'">Contribuir via PIX</button>
+      <div class="pix-box" id="pix-box">
+        <p>Copie a chave PIX abaixo:</p>
+        <span class="pix-key" id="pix-key">c9b0787a-8098-456d-b3b1-caa0c1b9b924</span>
+        <button class="pix-copy" onclick="navigator.clipboard.writeText('c9b0787a-8098-456d-b3b1-caa0c1b9b924').then(()=>this.textContent='Copiado ✓')">Copiar chave</button>
+        <p style="margin-top:.6rem;font-size:.72rem;color:var(--stone)">Oração de Cada Dia — qualquer valor é uma bênção.</p>
+      </div>
     </div>
   </div>
 </section>
